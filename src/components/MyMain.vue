@@ -2,11 +2,13 @@
 import FirstSection from './FirstSection.vue';
 import SecondSection from './SecondSection.vue';
 import ThirdSection from './ThirdSection.vue';
+import FourthSection from './FourthSection.vue';
 export default {
     components: {
         FirstSection,
         SecondSection,
-        ThirdSection
+        ThirdSection,
+        FourthSection,
     },
     name: 'MyMain',
     data() {
@@ -21,6 +23,7 @@ export default {
     <FirstSection />
     <SecondSection />
     <ThirdSection />
+    <FourthSection />
 </template>
 
 <style lang="scss" scoped>
