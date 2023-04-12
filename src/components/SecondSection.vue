@@ -41,7 +41,7 @@ export default {
             </div>
         </div>
         <div class="ms_box d-flex justify-content-end align-items-center">
-            <div class="ms_width_box mx-5">
+            <div class="ms_width_box">
                 <h6 class="fw-bold">ABOUT THE NETWORK</h6>
                 <h1 class="fw-bolder my-4">
                     <div class="d-inline-block ms_br_gr py-1 px-2">The</div>
@@ -85,6 +85,7 @@ export default {
 }
 
 .ms_width_box {
+    margin-right: 150px;
     width: 500px;
 
     & h6 {
