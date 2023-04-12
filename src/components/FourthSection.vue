@@ -146,7 +146,7 @@ export default {
 }
 
 .ms_container {
-    height: 1100px;
+    height: 1000px;
     background-color: $color-secondary-bg;
 
     & p {
