@@ -66,7 +66,7 @@ export default {
 @use '../styles/partials/variable' as *;
 
 .ms_container {
-    height: 500px;
+    height: 700px;
 
     & h6 {
         color: $color-primary;
