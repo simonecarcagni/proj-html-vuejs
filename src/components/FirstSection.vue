@@ -32,7 +32,7 @@ export default {
                 <div class="col-3" v-for="(card, index) in cardListSectionFirst" :key="index">
                     <div class="card p-3 ms_card_border" style="width: 18rem;">
                         <div class="card-body">
-                            <div class="ms_card_icon d-flex justify-content-center align-items-center">
+                            <div class="ms_icon_container d-flex justify-content-center align-items-center">
                                 <i :class="card.icon"></i>
                             </div>
                             <h5 class="card-title fw-bold my-3">{{ card.title }}</h5>
@@ -58,7 +58,7 @@ export default {
     border-color: white;
 }
 
-.ms_card_icon {
+.ms_icon_container {
     height: 50px;
     width: 50px;
     border-radius: 50%;

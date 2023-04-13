@@ -5,6 +5,7 @@ import ThirdSection from './ThirdSection.vue';
 import FourthSection from './FourthSection.vue';
 import FifthSection from './FifthSection.vue';
 import SixthSection from './SixthSection.vue';
+import SeventhSection from './SeventhSection.vue';
 export default {
     components: {
         FirstSection,
@@ -13,6 +14,7 @@ export default {
         FourthSection,
         FifthSection,
         SixthSection,
+        SeventhSection,
     },
     name: 'MyMain',
     data() {
@@ -30,6 +32,7 @@ export default {
     <FourthSection />
     <FifthSection />
     <SixthSection />
+    <SeventhSection />
 </template>
 
 <style lang="scss" scoped>

@@ -56,7 +56,8 @@ export default {
                             name: 'Standard Accounting',
                             icon: 'fa-solid fa-xmark'
                         }
-                    ]
+                    ],
+                    mostPopular: 'Most Popular'
                 },
                 {
                     icon: 'fa-regular fa-gem',
@@ -112,7 +113,11 @@ export default {
                 </div>
             </div>
             <div class="row">
-                <div class="col-4 bg-white ms_card_width mx-5 p-5" v-for="(element, index) in pricingList" :key="index">
+                <div class="col-4 bg-white ms_card_width mx-5 p-5 position-relative" v-for="(element, index) in pricingList"
+                    :key="index">
+                    <div class="ms_tag position-absolute start-0">
+                        <h6>{{ element.mostPopular }}</h6>
+                    </div>
                     <div class="text-center ms_services_top">
                         <i :class="element.icon"></i>
                         <h4 class="my-3 fw-bold">{{ element.title }}</h4>
@@ -179,6 +184,20 @@ export default {
 
     & i {
         color: $color-primary;
+    }
+}
+
+.ms_tag {
+    background-color: $color-primary;
+    width: 75px;
+    border-radius: 0px 15px 15px 0px;
+    top: 20px;
+
+    & h6 {
+        font-size: 14px;
+        color: white;
+        margin: 0;
+        padding: 0px 15px;
     }
 }
 </style>

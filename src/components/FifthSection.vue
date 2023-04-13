@@ -40,7 +40,7 @@ export default {
                 </div>
                 <div class="row d-flex justify-content-between mb-5">
                     <div class="col-7 d-flex align-items-center">
-                        <p class="">Every week we publish content about what is best in the business world.</p>
+                        <p>Every week we publish content about what is best in the business world.</p>
                     </div>
                     <div class="col-2 d-flex justify-content-end">
                         <button type="button" class="ms_button_gr mx-2">SEE ALL</button>
