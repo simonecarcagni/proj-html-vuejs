@@ -48,8 +48,8 @@ export default {
                     Company
                 </h1>
                 <p class="mb-5">For 12 years we have been providing audit and warranty, financial
-                    advicer risk advice, taxes and related services to select clients.</p>
-
+                    advicer risk advice, taxes and related services to select clients.
+                </p>
                 <div class="row ">
                     <div class="col-6 my-3" v-for="(card, index) in boxCardList" :key="index">
                         <h4 class="fw-bold mb-4">
@@ -63,9 +63,7 @@ export default {
             </div>
         </div>
         <div class="ms_box">
-
             <img src="../assets/img/about-3.jpg" alt="">
-
         </div>
     </div>
 </template>

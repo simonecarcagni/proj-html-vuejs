@@ -116,7 +116,7 @@ export default {
                 <div class="col-4 bg-white ms_card_width mx-5 p-5 position-relative" v-for="(element, index) in pricingList"
                     :key="index">
                     <div class="ms_tag position-absolute start-0">
-                        <h6>{{ element.mostPopular }}</h6>
+                        <h6 class="text-white">{{ element.mostPopular }}</h6>
                     </div>
                     <div class="text-center ms_services_top">
                         <i :class="element.icon"></i>
@@ -144,6 +144,11 @@ export default {
 .ms_card_width {
     width: calc(100% / 3 - 100px);
     border-radius: 10px;
+    transition: ease 1s;
+}
+
+.ms_card_width:hover {
+    transform: scale(1.1);
 }
 
 .ms_color {
@@ -155,7 +160,7 @@ export default {
     background-color: $color-secondary-bg;
 
     & p {
-        color: grey;
+        color: $color-text-grey;
     }
 }
 
@@ -179,7 +184,7 @@ export default {
 
 .ms_list_services {
     & h6 {
-        color: grey;
+        color: $color-text-grey;
     }
 
     & i {
@@ -195,7 +200,6 @@ export default {
 
     & h6 {
         font-size: 14px;
-        color: white;
         margin: 0;
         padding: 0px 15px;
     }

@@ -43,7 +43,7 @@ export default {
                         <p>Every week we publish content about what is best in the business world.</p>
                     </div>
                     <div class="col-2 d-flex justify-content-end">
-                        <button type="button" class="ms_button_gr mx-2">SEE ALL</button>
+                        <button type="button" class="ms_button_gr mx-2 text-white">SEE ALL</button>
                     </div>
                 </div>
             </div>
@@ -51,9 +51,21 @@ export default {
                 <div class="col-3" v-for="(card, index) in cardImgContent" :key="index">
                     <div class="card ms_img_card position-relative" style="width: 18rem;">
                         <img :src="getImagePath(`../assets/img/${card.src}.jpg`)" class="card-img-top" alt="Girl-1">
-                        <h5 class="text-center text-white position-absolute w-75 top-100 start-50 translate-middle">
+                        <h5 class="text-center text-white fw-bold position-absolute w-75 top-100 start-50 translate-middle">
                             {{ card.title }}
                         </h5>
+                        <h6 class="text-white fw-bold position-absolute top-0 start-0 m-3">
+                            <i class="fa-regular fa-user"></i>
+                            Andrea Miller
+                        </h6>
+                        <h6 class="text-white fw-bold position-absolute top-0 end-0 m-3">
+                            <i class="fa-regular fa-clock"></i>
+                            2 Days Ago
+                        </h6>
+                        <p class="text-center text-white fw-bold position-absolute w-75 top-100 start-50 translate-middle">
+                            Lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -73,7 +85,7 @@ export default {
     }
 
     & p {
-        color: grey;
+        color: $color-text-grey;
         margin: 0;
     }
 }
@@ -90,18 +102,49 @@ export default {
     background-color: $color-primary;
     border-color: $color-primary;
     border-radius: 5px;
-    color: white;
 }
 
 .ms_img_card {
     border-color: transparent;
+    transition: ease 1s;
 
     & img {
         border-radius: 10px;
-        filter: contrast(45%);
+        filter: contrast(40%);
+    }
+
+    & h6 {
+        display: none;
+    }
+
+    & p {
+        display: none;
     }
 
     & h5 {
+        text-shadow: 2px 2px $color-black;
+        padding-bottom: 150px;
+    }
+}
+
+.ms_img_card:hover {
+    transition: ease 1s;
+
+    & img {
+        filter: contrast(45%) blur(1px);
+        transition: ease 1s;
+    }
+
+    & h6 {
+        display: block;
+    }
+
+    & h5 {
+        padding-bottom: 300px;
+    }
+
+    & p {
+        display: block;
         padding-bottom: 150px;
     }
 }

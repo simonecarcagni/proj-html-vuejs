@@ -113,7 +113,7 @@ export default {
                             </h6>
                         </li>
                     </ul>
-                    <button type="button" class="ms_button_gr_invert">GET IN TOUCH</button>
+                    <button type="button" class="ms_button_gr_invert text-white">GET IN TOUCH</button>
                 </div>
                 <div class="ms_col_footer" v-for="(card, index) in footerCardList" :key="index">
                     <h4 class="text-white mb-3">{{ card.title }}</h4>
@@ -169,6 +169,13 @@ export default {
     border-color: $color-primary;
     border-radius: 5px;
     color: $color-primary;
+    transition: ease 1s;
+}
+
+.ms_button_gr_invert:hover {
+    background-color: $color-primary;
+    border-color: $color-primary;
+
 }
 
 .ms_icon_container {

@@ -34,9 +34,10 @@ export default {
                     </h1>
                     <p class="mb-5">We will respond to your message as soon as possible. </p>
                     <form class="d-flex flex-wrap ms_form gap-2">
-                        <div>
+                        <div class="position-relative">
                             <input class="form-control form-control-lg " type="text" placeholder="Name"
                                 aria-label="formName">
+                            <img src="../assets/img/image (1).png" class="position-absolute end-0 top-50 translate-middle">
                         </div>
                         <div>
                             <input class="form-control form-control-lg " type="text" placeholder="Email"
@@ -46,15 +47,17 @@ export default {
                             <input class="form-control form-control-lg " type="text" placeholder="Phone"
                                 aria-label="formPhone">
                         </div>
-                        <div>
+                        <div class="position-relative">
                             <input class="form-control form-control-lg " type="text" placeholder="More Info"
                                 aria-label="formInfo">
+                            <i
+                                class="fa-solid fa-chevron-down position-absolute end-0 top-50 translate-middle text-secondary"></i>
                         </div>
                         <div class="w-100">
-                            <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Message"
-                                rows="3"></textarea>
+                            <textarea class="form-control form-control-lg" id="exampleFormControlTextarea1"
+                                placeholder="Message" rows="3"></textarea>
                         </div>
-                        <button type="button" class="ms_button_gr my-2">SEND</button>
+                        <button type="button" class="ms_button_gr my-2 text-white">SEND</button>
                     </form>
                 </div>
                 <div class="col-5">
@@ -91,7 +94,7 @@ export default {
     }
 
     & p {
-        color: grey;
+        color: $color-text-grey;
         margin: 0;
     }
 }
@@ -111,14 +114,14 @@ export default {
         width: calc(100% / 2 - 4px);
 
         & input {
-            background-color: rgba($color: grey, $alpha: 0.2);
+            background-color: rgba($color: $color-text-grey, $alpha: 0.2);
             border-color: transparent;
             width: 100%;
         }
     }
 
     & textarea {
-        background-color: rgba($color: grey, $alpha: 0.2);
+        background-color: rgba($color: $color-text-grey, $alpha: 0.2);
         border-color: transparent;
     }
 }
@@ -129,7 +132,6 @@ export default {
     background-color: $color-primary;
     border-color: $color-primary;
     border-radius: 5px;
-    color: white;
 }
 
 .ms_button_gr_invert {
@@ -139,6 +141,13 @@ export default {
     border-color: $color-primary;
     border-radius: 5px;
     color: $color-primary;
+    transition: ease 1s;
+}
+
+.ms_button_gr_invert:hover {
+    background-color: $color-primary;
+    border-color: $color-primary;
+    color: $color-white;
 }
 
 .ms_icon_container {

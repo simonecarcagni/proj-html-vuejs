@@ -28,9 +28,9 @@ export default {
 <template>
     <div class="ms_container">
         <div class="container h-100">
-            <div class="row d-flex justify-content-between align-items-center h-100">
+            <div class="row d-flex justify-content-around align-items-center h-100">
                 <div class="col-3" v-for="(card, index) in cardListSectionFirst" :key="index">
-                    <div class="card p-3 ms_card_border" style="width: 18rem;">
+                    <div class="card p-3 ms_card_border">
                         <div class="card-body">
                             <div class="ms_icon_container d-flex justify-content-center align-items-center">
                                 <i :class="card.icon"></i>
@@ -55,7 +55,14 @@ export default {
 }
 
 .ms_card_border {
-    border-color: white;
+    width: 18rem;
+    height: 16rem;
+    border-color: $color-white;
+    transition: ease 1s;
+}
+
+.ms_card_border:hover {
+    transform: scale(1.2);
 }
 
 .ms_icon_container {
@@ -71,6 +78,6 @@ export default {
 }
 
 p {
-    color: grey;
+    color: $color-text-grey;
 }
 </style>

@@ -46,19 +46,20 @@ export default {
             <div class="row pt-5">
                 <div class="col-12 mt-5">
                     <h6 class="fw-bold">OURS BUSINESS AREA</h6>
-                    <h1 class="fw-bolder my-4">
+                    <h1 class="fw-bolder my-4 text-white">
                         Excellence in
                         <div class="d-inline-block ms_br_gr py-1 px-2">Services</div>
                     </h1>
                 </div>
                 <div class="row d-flex justify-content-between">
                     <div class="col-7">
-                        <p class="mb-5">We are leaders in providing consultancy services with a set of cutting-edge
-                            technologies
-                            and a team of and renowned professionals. These are some options that you can hire.</p>
+                        <p class="mb-5">
+                            We are leaders in providing consultancy services with a set of cutting-edge
+                            technologiesand a team of and renowned professionals. These are some options that you can hire.
+                        </p>
                     </div>
                     <div class="col-2 d-flex justify-content-end">
-                        <button type="button" class="ms_button_gr_invert mx-2">SEE ALL</button>
+                        <button type="button" class="ms_button_gr_invert mx-2 text-white">SEE ALL</button>
                     </div>
                 </div>
             </div>
@@ -69,9 +70,9 @@ export default {
                             <div class="ms_card_icon">
                                 <i :class="card.icon"></i>
                             </div>
-                            <h5 class="card-title fw-bold my-3">{{ card.title }}</h5>
+                            <h5 class="card-title fw-bold my-3 text-white">{{ card.title }}</h5>
                             <p class="card-text">{{ card.paragraph }}</p>
-                            <button type="button" class="ms_button_gr_invert">READ MORE</button>
+                            <button type="button" class="ms_button_gr_invert text-white">READ MORE</button>
                         </div>
                     </div>
                 </div>
@@ -93,10 +94,6 @@ export default {
         color: $color-primary;
     }
 
-    & h1 {
-        color: white;
-    }
-
     & p {
         color: $color-text-1;
     }
@@ -106,14 +103,23 @@ export default {
     height: 300px;
     width: calc(100% / 3 - 50px);
     margin: 15px 0px;
+    transition: ease 1s;
+}
+
+.ms_card_gap:hover {
+    transform: scale(1.1);
+
+    & i {
+        color: $color-white;
+    }
+
+    & p {
+        color: $color-white;
+    }
 }
 
 .ms_card_bg {
     background-color: $color-bg-card-dark;
-
-    & h5 {
-        color: white;
-    }
 }
 
 .ms_card_icon {
@@ -132,7 +138,12 @@ export default {
     background-color: transparent;
     border-color: $color-primary;
     border-radius: 5px;
-    color: white;
+    transition: ease 1s;
+}
+
+.ms_button_gr_invert:hover {
+    background-color: $color-primary;
+    border-color: $color-primary;
 }
 
 .ms_br_gr {

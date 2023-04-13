@@ -44,10 +44,10 @@ export default {
                 </div>
                 <div class="col-6 d-flex justify-content-end ms_margin_right">
                     <ul class="d-flex align-items-center">
-                        <li v-for="(link, index) in headerLinkList" :key="index" class="mx-2 mt-1"><a :href="link.path">{{
-                            link.name }}</a></li>
+                        <li v-for="(link, index) in headerLinkList" :key="index" class="mx-2 mt-1">
+                            {{ link.name }}</li>
                         <li class="mx-2 mt-1">
-                            <button type="button" class="ms_button_gr">GET IN TOUCH</button>
+                            <button type="button" class="ms_button_gr text-white">GET IN TOUCH</button>
                         </li>
                     </ul>
                 </div>
@@ -62,8 +62,8 @@ export default {
                         taking advantage of the Iatest technologies to offer excellent services.</p>
                 </div>
                 <div class="col-12 d-flex justify-content-center">
-                    <button type="button" class="ms_button_gr mx-2">GET IN TOUCH</button>
-                    <button type="button" class="ms_button_gr mx-2">GET IN TOUCH</button>
+                    <button type="button" class="ms_button_gr mx-2 text-white">GET IN TOUCH</button>
+                    <button type="button" class="ms_button_gr_invert mx-2 text-white">READ MORE</button>
                 </div>
             </div>
         </div>
@@ -75,8 +75,7 @@ export default {
 @use '../styles/partials/variable' as *;
 
 .ms_jumbotron {
-
-    height: 900px;
+    height: 910px;
     width: 100%;
     background-image: url(../assets/img/hero-image.png);
     background-repeat: no-repeat;
@@ -84,13 +83,17 @@ export default {
     background-size: cover;
 
     & .ms_overlay {
-        background-color: black;
+        background-color: $color-black;
         opacity: 0.7;
     }
 }
 
 .ms_margin_right {
     margin-right: 7rem;
+
+    & li {
+        color: $color-text-1;
+    }
 }
 
 .ms_header_title {
@@ -112,9 +115,7 @@ export default {
     }
 }
 
-a {
-    color: $color-text-1;
-}
+
 
 
 
@@ -123,7 +124,20 @@ a {
     background-color: $color-primary;
     border-color: $color-primary;
     border-radius: 5px;
-    color: white;
+}
+
+.ms_button_gr_invert {
+    height: 45px;
+    padding: 5px 21px;
+    background-color: transparent;
+    border-color: $color-primary;
+    border-radius: 5px;
+    transition: ease 1s;
+}
+
+.ms_button_gr_invert:hover {
+    background-color: $color-primary;
+    border-color: $color-primary;
 }
 
 p {
