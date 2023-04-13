@@ -1,14 +1,16 @@
 <script>
+import PreHeader from './components/PreHeader.vue';
 import MyHeader from './components/MyHeader.vue';
 import MyMain from './components/MyMain.vue';
 import MyFooter from './components/MyFooter.vue';
-import PreHeader from './components/PreHeader.vue';
+import PostFooter from './components/PostFooter.vue';
 export default {
   components: {
+    PreHeader,
     MyHeader,
     MyMain,
     MyFooter,
-    PreHeader,
+    PostFooter
   },
   data() {
     return {
@@ -23,6 +25,7 @@ export default {
   <MyHeader />
   <MyMain />
   <MyFooter />
+  <PostFooter />
 </template>
 
 <style lang="scss">
